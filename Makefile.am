@@ -1,5 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
+ACLOCAL_AMFLAGS = -I m4
 AUTOMAKE_OPTIONS = 1.4 foreign
 
 # A list of all the files in the current directory which can be regenerated

@@ -2,6 +2,7 @@ dnl Process this file with autoconf to create configure.
 
 AC_INIT
 AC_CONFIG_SRCDIR([apache/apache.fec])
+AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE(mod_ferite, 1.1.18)
 AM_CONFIG_HEADER(config.h)
 
