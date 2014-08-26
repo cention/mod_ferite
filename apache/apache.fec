@@ -46,6 +46,11 @@ module-header
  * @description The easiest way to get an instance of this class is to used the static
 	method 'Request.current()'.
  */ 
+
+namespace Apache {
+    object request;
+}
+
 class Request
 {
 	native function constructor()
@@ -646,7 +651,10 @@ class Request
 	* @return A Request object which can then be used to gleam valuable information.
 	*/
 	static function current() {
-		return new Request();
+	    if (!Apache.request) {
+	        Apache.request = new Request();
+	    }
+	    return Apache.request;
 	}
 }
 /**
